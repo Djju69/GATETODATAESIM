@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "grammy": "^1.38.2",
-    "next": "15.5.4",
+    "next": "^15.5.29",
     "postgres": "^4.1.1",
     "qrcode": "^1.5.4",
     "react": "19.1.0",
