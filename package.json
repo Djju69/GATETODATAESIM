@@ -1,0 +1,38 @@
+{
+  "name": "gatetodata-esim",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start -p 3010",
+    "bot": "tsx src/bot/index.ts",
+    "sync": "tsx scripts/sync-catalog.ts",
+    "probe": "tsx scripts/telmo-probe.ts",
+    "watch:usdt": "tsx scripts/watch-usdt.ts",
+    "backup": "tsx scripts/backup.ts",
+    "seed-demo": "tsx scripts/seed-demo.ts",
+    "set-webhook": "node scripts/set-webhook.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "grammy": "^1.38.2",
+    "next": "15.5.4",
+    "postgres": "^4.1.1",
+    "qrcode": "^1.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

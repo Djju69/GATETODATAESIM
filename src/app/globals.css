@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(0, 229, 160, 0.08), transparent 60%),
+    radial-gradient(900px 600px at -10% 30%, rgba(77, 139, 255, 0.07), transparent 55%),
+    #0b0f14;
+  color: #f2f5f8;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(0, 229, 160, 0.25);
+}
+
+/* ---------- Компоненты ---------- */
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-signal/60 disabled:opacity-50 disabled:pointer-events-none;
+}
+.btn-primary {
+  @apply btn bg-signal text-ink hover:bg-signal-dark active:scale-[.98] px-5 py-3 text-[15px];
+}
+.btn-secondary {
+  @apply btn border border-line bg-raised text-fg hover:border-signal/50 active:scale-[.98] px-5 py-3 text-[15px];
+}
+.btn-ghost {
+  @apply btn text-muted hover:text-fg px-3 py-2 text-sm;
+}
+.btn-sm {
+  @apply px-3 py-2 text-sm rounded-lg;
+}
+
+.card {
+  @apply rounded-2xl border border-line bg-surface shadow-card;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-full border border-line bg-raised px-3 py-1 text-xs font-medium text-muted;
+}
+.chip-active {
+  @apply border-signal/60 bg-signal/10 text-signal;
+}
+
+.input {
+  @apply w-full rounded-xl border border-line bg-raised px-4 py-3 text-[15px] text-fg placeholder:text-muted/60
+    focus:outline-none focus:ring-2 focus:ring-signal/50 focus:border-signal/40 transition;
+}
+
+.label {
+  @apply mb-1.5 block text-sm font-medium text-muted;
+}
+
+.section {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+
+.h-display {
+  @apply font-display font-semibold tracking-tight;
+}
+
+.status-chip {
+  @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold;
+}
+
+.skeleton {
+  @apply animate-pulse rounded-lg bg-raised;
+}
